@@ -65,6 +65,7 @@ export async function exportData(
         exportedAt: new Date().toISOString(),
         totalRules: data.businessRules.length,
         enabledRules: data.businessRules.filter(rule => rule.enabled).length,
+        // @ts-ignore
         ruleTypes: [...new Set(data.businessRules.map(rule => rule.type))]
       }
     };
