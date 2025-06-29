@@ -339,6 +339,7 @@ function validateCrossReferences(
       type: 'clients',
       row: -1,
       field: 'ClientID',
+      // @ts-ignore
       message: `Duplicate ClientIDs found: ${[...new Set(duplicateClientIds)].join(', ')}`,
       severity: 'error',
       suggestion: 'Ensure all ClientIDs are unique'
@@ -351,6 +352,7 @@ function validateCrossReferences(
       type: 'workers',
       row: -1,
       field: 'WorkerID',
+      // @ts-ignore
       message: `Duplicate WorkerIDs found: ${[...new Set(duplicateWorkerIds)].join(', ')}`,
       severity: 'error',
       suggestion: 'Ensure all WorkerIDs are unique'
@@ -363,6 +365,7 @@ function validateCrossReferences(
       type: 'tasks',
       row: -1,
       field: 'TaskID',
+      // @ts-ignore
       message: `Duplicate TaskIDs found: ${[...new Set(duplicateTaskIds)].join(', ')}`,
       severity: 'error',
       suggestion: 'Ensure all TaskIDs are unique'

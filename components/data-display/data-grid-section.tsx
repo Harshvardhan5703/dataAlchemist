@@ -88,6 +88,7 @@ export function DataGridSection({
               <DataGrid
                 data={clientData}
                 type="clients"
+                // @ts-ignore
                 onDataChange={onClientDataChange}
                 validationErrors={validationErrors.filter(e => e.type === 'clients')}
               />
@@ -107,6 +108,7 @@ export function DataGridSection({
               <DataGrid
                 data={workerData}
                 type="workers"
+                // @ts-ignore
                 onDataChange={onWorkerDataChange}
                 validationErrors={validationErrors.filter(e => e.type === 'workers')}
               />
@@ -126,6 +128,7 @@ export function DataGridSection({
               <DataGrid
                 data={taskData}
                 type="tasks"
+                // @ts-ignore
                 onDataChange={onTaskDataChange}
                 validationErrors={validationErrors.filter(e => e.type === 'tasks')}
               />

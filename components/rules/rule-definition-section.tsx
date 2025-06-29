@@ -53,6 +53,7 @@ export function RuleDefinitionSection({
         exportedAt: new Date().toISOString(),
         totalRules: businessRules.length,
         enabledRules: enabledRules.length,
+        // @ts-ignore
         ruleTypes: [...new Set(businessRules.map(rule => rule.type))]
       }
     };

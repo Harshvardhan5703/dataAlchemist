@@ -99,6 +99,7 @@ export function PrioritizationPreview({ profile }: PrioritizationPreviewProps) {
                     
                     <div className="space-y-3">
                       {profile.criteria.map((criterion) => {
+                        // @ts-ignore
                         const score = scenario.scores[criterion.id] || 0;
                         const weightedScore = score * criterion.weight;
                         

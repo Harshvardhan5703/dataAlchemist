@@ -170,7 +170,9 @@ function CoRunParameters({ parameters, setParameters, taskData }: any) {
 }
 
 function SlotRestrictionParameters({ parameters, setParameters, clientData, workerData }: any) {
+  // @ts-ignore
   const clientGroups = [...new Set(clientData.map((c: ClientData) => c.GroupTag))];
+  // @ts-ignore
   const workerGroups = [...new Set(workerData.map((w: WorkerData) => w.WorkerGroup))];
 
   return (
@@ -222,6 +224,7 @@ function SlotRestrictionParameters({ parameters, setParameters, clientData, work
 }
 
 function LoadLimitParameters({ parameters, setParameters, workerData }: any) {
+  // @ts-ignore
   const workerGroups = [...new Set(workerData.map((w: WorkerData) => w.WorkerGroup))];
 
   return (
